@@ -1,0 +1,221 @@
+/* Resetări de bază și setări globale */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.sidebar {
+    width: 35%;
+    background-color: #2c3e50; /* O culoare albastru-închis, profesională */
+    color: #ecf0f1;
+    padding: 30px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.sidebar h1 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.sidebar .job-title {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 0;
+    color: #1abc9c; /* Culoare de accent */
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 20px;
+    /* Am adăugat padding-top și margin-top în blocurile de mai jos (la poza de profil) */
+}
+
+.sidebar h2 {
+    font-size: 1.4em;
+    color: #ffffff;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Stilul listei de contact */
+.contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.contact li i {
+    width: 30px; /* Aliniere iconițe */
+    font-size: 1.1em;
+    color: #1abc9c; /* Accent */
+    text-align: center;
+    margin-right: 5px;
+}
+
+/* Stilul secțiunii de limbi */
+.language-item {
+    margin-bottom: 15px;
+}
+
+.language-item p {
+    margin: 0;
+}
+
+.language-item p strong {
+    font-size: 1.1em;
+    color: #ecf0f1;
+}
+
+.activities p {
+    font-style: italic;
+    color: #bdc3c7;
+}
+
+/* * COLOANA PRINCIPALĂ (CONȚINUT)
+ */
+.main-content {
+    width: 65%;
+    padding: 40px;
+}
+
+.main-section {
+    margin-bottom: 30px;
+}
+
+.main-section h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.main-section h2 .icon {
+    font-size: 0.8em;
+    margin-right: 12px;
+    color: #1abc9c;
+}
+
+/* Stilul itemilor din CV (Educație, Proiecte) */
+.cv-item {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 4px solid #1abc9c;
+    position: relative;
+}
+
+/* Adaugă un cerc pe bara laterală (stil timeline) */
+.cv-item::before {
+    content: '';
+    position: absolute;
+    left: -12px; /* (lățime bară 4px + jumătate cerc 8px) */
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    background-color: #1abc9c;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+
+.cv-item .date {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.cv-item h3 {
+    font-size: 1.3em;
+    margin: 0 0 5px 0;
+    color: #34495e;
+}
+
+.cv-item h4 {
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+.cv-item p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Liste (pentru competențe, cursuri) */
+.main-content ul {
+    padding-left: 20px;
+}
+
+.main-content li {
+    margin-bottom: 8px;
+}
+
+/* Responsive Design (pentru telefoane) */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .sidebar,
+    .main-content {
+        width: auto;
+        border-radius: 0;
+    }
+
+    .sidebar {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    }
+}
+
+
+.profile-picture {
+    width: 150px; /* Dimensiunea imaginii */
+    height: 150px;
+    border-radius: 50%; /* Face imaginea rotundă */
+    overflow: hidden; /* Ascunde ce depășește cercul */
+    margin: 20px auto; /* Centrează imaginea și adaugă spațiu */
+    border: 4px solid #1abc9c; /* O margine accentuată */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Umbră subtilă */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asigură că imaginea acoperă complet cercul */
+    display: block; /* Elimină spațiul de sub imagine */
+}
+
+/* Ajustări pentru a asigura că restul elementelor se aliniază după adăugarea pozei */
+.sidebar .job-title {
+    margin-top: 15px; /* Aduce titlul de job mai aproape de poză */
+    padding-top: 10px; /* Ajustează padding-ul superior */
+}
