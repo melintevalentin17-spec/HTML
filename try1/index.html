@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitale Europene</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Capitale Europene</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Acasă</a></li>
+                    <li><a href="#" class="active"><i class="fa-solid fa-earth-europe"></i> Toate Capitalele</a></li>
+                    <li><a href="#"><i class="fa-solid fa-star"></i> Cele Mai Populare</a></li>
+                    <li><a href="#"><i class="fa-solid fa-tags"></i> Recomandări</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="page-title">
+            <h2>Toate Capitalele Europene</h2>
+        </div>
+        
+        <section class="filters">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Caută după oraș sau țară...">
+            </div>
+            <div class="region-filter">
+                <select name="regiune" id="regiune-select">
+                    <option value="toate">Toate regiunile</option>
+                    <option value="vest">Europa de Vest</option>
+                    <option value="centrala">Europa Centrală</option>
+                    <option value="sud">Europa de Sud</option>
+                    <option value="nord">Europa de Nord</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="capitals-grid">
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/400/300?image=101" alt="Turnul Eiffel">
+                    <span class="country-tag">Franța</span>
+                </div>
+                <div class="card-content">
+                    <h3>Paris</h3>
+                    <div class="info-line">
+                        <i class="fa-solid fa-users"></i>
+                        <span>2.2 milioane</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Franceză</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-landmark"></i>
+                        <span>Turnul Eiffel</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/400/300?image=102" alt="Big Ben">
+                    <span class="country-tag">Regatul Unit</span>
+                </div>
+                <div class="card-content">
+                    <h3>Londra</h3>
+                    <div class="info-line">
+                        <i class="fa-solid fa-users"></i>
+                        <span>9.0 milioane</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Engleză</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-landmark"></i>
+                        <span>Big Ben</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/400/300?image=103" alt="Colosseumul">
+                    <span class="country-tag">Italia</span>
+                </div>
+                <div class="card-content">
+                    <h3>Roma</h3>
+                    <div class="info-line">
+                        <i class="fa-solid fa-users"></i>
+                        <span>2.8 milioane</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Italiană</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-landmark"></i>
+                        <span>Colosseumul</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/400/300?image=104" alt="Poarta Brandenburg">
+                    <span class="country-tag">Germania</span>
+                </div>
+                <div class="card-content">
+                    <h3>Berlin</h3>
+                    <div class="info-line">
+                        <i class="fa-solid fa-users"></i>
+                        <span>3.7 milioane</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-flag"></i>
+                        <span>Germană</span>
+                    </div>
+                    <div class="info-line">
+                        <i class="fa-solid fa-landmark"></i>
+                        <span>Poarta Brandenburg</span>
+                    </div>
+                </div>
+            </article>
+            
+            </section>
+    </main>
+
+</body>
+</html>

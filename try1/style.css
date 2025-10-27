@@ -1,0 +1,179 @@
+/* --- Resetare de bază și Stiluri Globale --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; /* Fundal gri deschis */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrează conținutul */
+    padding: 0 20px;
+}
+
+/* --- 1. Stiluri Header / Navigare --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 16px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 8px;
+    color: #555;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #f1f3f5;
+}
+
+nav a.active {
+    background-color: #212529; /* Fundal închis pentru link activ */
+    color: #ffffff;
+}
+
+/* --- 2.1. Stiluri Filtre --- */
+.page-title {
+    margin: 24px 0;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.search-bar {
+    position: relative;
+    width: 300px;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Spațiu pentru iconiță */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.region-filter select {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* --- 2.2. Stiluri Grilă și Carduri --- */
+.capitals-grid {
+    display: grid;
+    /* Comanda magică pentru grila responsivă: */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px; /* Spațiul dintre carduri */
+    padding-bottom: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Ascunde colțurile imaginii care ies */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-image {
+    position: relative; /* Necesar pentru a poziționa eticheta */
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asigură că imaginea umple spațiul fără a fi deformată */
+}
+
+.country-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent */
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.info-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.info-line i {
+    width: 20px; /* Aliniază textul frumos */
+    margin-right: 8px;
+    color: #888;
+}
