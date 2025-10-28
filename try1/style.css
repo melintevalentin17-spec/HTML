@@ -1,4 +1,4 @@
-/* --- Resetare de bază și Stiluri Globale --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,6 @@ body {
     padding: 0 20px;
 }
 
-/* --- 1. Stiluri Header / Navigare --- */
 header {
     background-color: #ffffff;
     border-bottom: 1px solid #e9ecef;
@@ -176,4 +175,5 @@ nav a.active {
     width: 20px; /* Aliniază textul frumos */
     margin-right: 8px;
     color: #888;
+
 }
