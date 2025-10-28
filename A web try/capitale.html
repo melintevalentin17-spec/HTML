@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toate Capitalele Europene</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="capitale.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body> 
+
+    <header>
+        <div class="logo">
+            <a href="index.html">Capitale Europene</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="capitale.html" class="active">Toate Capitalele</a></li>
+                <li><a href="#">Cele Mai Populare</a></li>
+                <li><a href="#">Recomandări</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="capitale-hero">
+            <h1>Toate Capitalele Europene</h1>
+        </section>
+
+        <section class="search-filter-section">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Caută după oraș sau țară...">
+            </div>
+            
+            <div class="filter-dropdown" id="filterDropdownToggle">
+                <span id="filterDropdownLabel">Toate regiunile</span>
+                <i class="fas fa-chevron-down"></i>
+                
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#" class="dropdown-item active" data-filter="toate">
+                        <span>Toate regiunile</span>
+                        <i class="fas fa-check"></i>
+                    </a>
+                    <a href="#" class="dropdown-item" data-filter="vest">
+                        <span>Europa de Vest</span>
+                    </a>
+                    <a href="#" class="dropdown-item" data-filter="centrala">
+                        <span>Europa Centrală</span>
+                    </a>
+                    <a href="#" class="dropdown-item" data-filter="sud">
+                        <span>Europa de Sud</span>
+                    </a>
+                    <a href="#" class="dropdown-item" data-filter="nord">
+                        <span>Europa de Nord</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="capitale-grid" id="capitaleGrid">
+            <div class="capital-card" data-region="vest">
+                <div class="card-image-container">
+                    <img src="images/paris.jpg" alt="Paris">
+                    <span class="country-tag">Franța</span>
+                </div>
+                <div class="card-info">
+                    <h3>Paris</h3>
+                    <p><i class="fas fa-users"></i> 2.2 milioane</p>
+                    <p><i class="fas fa-language"></i> Franceză</p>
+                    <p><i class="fas fa-landmark"></i> Turnul Eiffel</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="nord">
+                <div class="card-image-container">
+                    <img src="images/londra.jpg" alt="Londra">
+                    <span class="country-tag">Regatul Unit</span>
+                </div>
+                <div class="card-info">
+                    <h3>Londra</h3>
+                    <p><i class="fas fa-users"></i> 9.0 milioane</p>
+                    <p><i class="fas fa-language"></i> Engleză</p>
+                    <p><i class="fas fa-landmark"></i> Big Ben</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="sud">
+                <div class="card-image-container">
+                    <img src="images/roma.jpg" alt="Roma">
+                    <span class="country-tag">Italia</span>
+                </div>
+                <div class="card-info">
+                    <h3>Roma</h3>
+                    <p><i class="fas fa-users"></i> 2.8 milioane</p>
+                    <p><i class="fas fa-language"></i> Italiană</p>
+                    <p><i class="fas fa-landmark"></i> Colosseumul</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="centrala">
+                <div class="card-image-container">
+                    <img src="images/berlin.jpg" alt="Berlin">
+                    <span class="country-tag">Germania</span>
+                </div>
+                <div class="card-info">
+                    <h3>Berlin</h3>
+                    <p><i class="fas fa-users"></i> 3.7 milioane</p>
+                    <p><i class="fas fa-language"></i> Germană</p>
+                    <p><i class="fas fa-landmark"></i> Poarta Brandenburg</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="sud">
+                <div class="card-image-container">
+                    <img src="images/madrid.jpg" alt="Madrid">
+                    <span class="country-tag">Spania</span>
+                </div>
+                <div class="card-info">
+                    <h3>Madrid</h3>
+                    <p><i class="fas fa-users"></i> 3.3 milioane</p>
+                    <p><i class="fas fa-language"></i> Spaniolă</p>
+                    <p><i class="fas fa-landmark"></i> Palatul Regal</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="vest">
+                <div class="card-image-container">
+                    <img src="images/amsterdam.jpg" alt="Amsterdam">
+                    <span class="country-tag">Olanda</span>
+                </div>
+                <div class="card-info">
+                    <h3>Amsterdam</h3>
+                    <p><i class="fas fa-users"></i> 872 mii</p>
+                    <p><i class="fas fa-language"></i> Olandeză</p>
+                    <p><i class="fas fa-landmark"></i> Canalele</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="centrala">
+                <div class="card-image-container">
+                    <img src="images/viena.jpg" alt="Viena">
+                    <span class="country-tag">Austria</span>
+                </div>
+                <div class="card-info">
+                    <h3>Viena</h3>
+                    <p><i class="fas fa-users"></i> 1.9 milioane</p>
+                    <p><i class="fas fa-language"></i> Germană</p>
+                    <p><i class="fas fa-landmark"></i> Palatul Schönbrunn</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="sud">
+                <div class="card-image-container">
+                    <img src="images/atena.jpg" alt="Atena">
+                    <span class="country-tag">Grecia</span>
+                </div>
+                <div class="card-info">
+                    <h3>Atena</h3>
+                    <p><i class="fas fa-users"></i> 3.1 milioane</p>
+                    <p><i class="fas fa-language"></i> Greacă</p>
+                    <p><i class="fas fa-landmark"></i> Acropole</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="sud">
+                <div class="card-image-container">
+                    <img src="images/lisabona.jpg" alt="Lisabona">
+                    <span class="country-tag">Portugalia</span>
+                </div>
+                <div class="card-info">
+                    <h3>Lisabona</h3>
+                    <p><i class="fas fa-users"></i> 505 mii</p>
+                    <p><i class="fas fa-language"></i> Portugheză</p>
+                    <p><i class="fas fa-landmark"></i> Turnul Belém</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="centrala">
+                <div class="card-image-container">
+                    <img src="images/praga.jpg" alt="Praga">
+                    <span class="country-tag">Cehia</span>
+                </div>
+                <div class="card-info">
+                    <h3>Praga</h3>
+                    <p><i class="fas fa-users"></i> 1.3 milioane</p>
+                    <p><i class="fas fa-language"></i> Cehă</p>
+                    <p><i class="fas fa-landmark"></i> Castelul Praga</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="centrala">
+                <div class="card-image-container">
+                    <img src="images/budapesta.jpg" alt="Budapesta">
+                    <span class="country-tag">Ungaria</span>
+                </div>
+                <div class="card-info">
+                    <h3>Budapesta</h3>
+                    <p><i class="fas fa-users"></i> 1.7 milioane</p>
+                    <p><i class="fas fa-language"></i> Maghiară</p>
+                    <p><i class="fas fa-landmark"></i> Parlamentul</p>
+                </div>
+            </div>
+
+            <div class="capital-card" data-region="nord">
+                <div class="card-image-container">
+                    <img src="images/stockholm.jpg" alt="Stockholm">
+                    <span class="country-tag">Suedia</span>
+                </div>
+                <div class="card-info">
+                    <h3>Stockholm</h3>
+                    <p><i class="fas fa-users"></i> 975 mii</p>
+                    <p><i class="fas fa-language"></i> Suedeză</p>
+                    <p><i class="fas fa-landmark"></i> Gamla Stan</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>EuroCapitals Travel</h4>
+                <p>Descoperă frumusețea și diversitatea capitalelor europene cu ghidurile noastre complete și inspirația perfectă pentru următoarea ta aventură.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigare Rapidă</h4>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="capitale.html">Toate Capitalele</a></li>
+                    <li><a href="#">Cele Mai Populare</a></li>
+                    <li><a href="#">Recomandări</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> contact@eurocapitals.ro</p>
+                <p><i class="fas fa-phone"></i> +40 123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> București, România</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Urmărește-ne</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>Alătură-te comunității noastre de pasionați de călătorii și descoperă noi destinații în fiecare zi.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 EuroCapitals Travel. Toate drepturile rezervate. Made with <i class="fas fa-heart"></i> for travelers.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.getElementById('filterDropdownToggle');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const dropdownLabel = document.getElementById('filterDropdownLabel');
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            const searchInput = document.getElementById('searchInput');
+            const capitaleGrid = document.getElementById('capitaleGrid');
+            const capitalCards = capitaleGrid.querySelectorAll('.capital-card');
+
+            let currentFilter = 'toate';
+
+            if (dropdownToggle) { 
+                dropdownToggle.addEventListener('click', function(event) {
+                    event.stopPropagation(); 
+                    dropdownMenu.classList.toggle('show');
+                });
+            }
+
+            window.addEventListener('click', function() {
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    
+                    dropdownItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    currentFilter = this.dataset.filter;
+                    dropdownLabel.textContent = this.querySelector('span').textContent;
+                    
+                    dropdownMenu.classList.remove('show');
+                    
+                    filterAndSearch();
+                });
+            });
+
+            searchInput.addEventListener('input', filterAndSearch);
+
+            function filterAndSearch() {
+                let searchTerm = searchInput.value.toLowerCase();
+
+                capitalCards.forEach(card => {
+                    const region = card.dataset.region;
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const country = card.querySelector('.country-tag').textContent.toLowerCase();
+                    const cardText = title + country;
+
+                    const regionMatch = (currentFilter === 'toate' || region === currentFilter);
+                    const searchMatch = cardText.includes(searchTerm);
+
+                    if (regionMatch && searchMatch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

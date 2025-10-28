@@ -1,0 +1,134 @@
+body {
+    background: url('https://images2.alphacoders.com/546/546391.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; 
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+header .logo a,
+header nav a {
+    color: #fff; 
+}
+header nav a:hover {
+    color: #ddd;
+}
+header nav a.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.hero {
+    padding: 15vh 0; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    text-shadow: none; 
+}
+
+.hero-buttons .btn-primary {
+    background-color: #fff;
+    color: #333;
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+.hero-buttons .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.features {
+    background-color: rgba(40, 40, 40, 0.85); 
+    backdrop-filter: blur(5px); 
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
+}
+
+.card {
+    background-color: #fff; 
+    color: #333; 
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 280px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .icon {
+    font-size: 2.5rem; 
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer {
+    background-color: rgba(11, 15, 26, 0.95); 
+    backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}

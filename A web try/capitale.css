@@ -1,0 +1,230 @@
+body {
+    background-color: #f8f8f8; 
+    color: #333; 
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+header .logo a,
+header nav a {
+    color: #333; 
+}
+header nav a:hover {
+    color: #007bff;
+}
+header nav a.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.capitale-hero {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.capitale-hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.search-filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.search-bar {
+    position: relative;
+    width: 400px; 
+    max-width: 90%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+}
+
+.search-bar .fas {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.filter-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #555;
+    transition: all 0.3s ease;
+    position: relative; 
+    user-select: none;
+}
+
+.filter-dropdown:hover {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.capitale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.capital-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capital-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image-container {
+    position: relative;
+    height: 180px; 
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.country-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-info {
+    padding: 1.5rem;
+    color: #333;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0b0f1a; 
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card-info p .fas {
+    color: #888; 
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    z-index: 100;
+    
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+    width: 250px; 
+    margin-top: 0.5rem; 
+    padding: 0.5rem 0; 
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f4f4f4; 
+}
+
+.dropdown-item .fa-check {
+    color: #007bff; 
+    opacity: 0; 
+    transition: opacity 0.2s ease;
+}
+
+.dropdown-item.active {
+    font-weight: 500;
+    color: #007bff;
+}
+
+.dropdown-item.active .fa-check {
+    opacity: 1; 
+}
+
+@media (max-width: 768px) {
+    .search-filter-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search-bar {
+        width: 100%;
+    }
+    .filter-dropdown {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .capitale-grid {
+        grid-template-columns: 1fr; 
+        padding: 2rem 1rem;
+    }
+}
