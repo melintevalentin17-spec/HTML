@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Create modal container with correct structure
+
   if (!document.getElementById('capitalModal')) {
     const wrapper = document.createElement('div');
     wrapper.id = 'capitalModal';
@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const tagsEl = document.getElementById('modalTags');
 
   function openModalFromCard(card) {
-    // Extract image
+    
     const img = card.querySelector('img');
     const imgSrc = img ? img.getAttribute('src') : '';
     if (imgSrc) {
       hero.style.backgroundImage = `url('${imgSrc}')`;
     }
 
-    // Extract title and country
+   
     const h3 = card.querySelector('h3');
     const title = h3 ? h3.textContent.trim() : 'Capitală';
     const countryTag = card.querySelector('.country-tag');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     titleEl.textContent = title;
     countryEl.textContent = country;
 
-    // Extract population, language, landmark from .card-info (capitale.html, recomandari.html)
+  
     let pop = '-', lang = '-', land = '-';
     const cardInfo = card.querySelector('.card-info');
     if (cardInfo) {
@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Extract from .city-info (popular.html)
     const cityInfo = card.querySelector('.city-info');
     if (cityInfo) {
       const items = cityInfo.querySelectorAll('.info-item');
@@ -122,8 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     else desc = `${title} este capitala ${country || ''}.`;
     
     descEl.textContent = desc;
-
-    // Extract and populate tags (objectives)
     tagsEl.innerHTML = '';
     const featureTags = card.querySelectorAll('.feature-tag, .city-tags .tag');
     if (featureTags && featureTags.length > 0) {
@@ -134,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tagsEl.appendChild(span);
       });
     } else {
-      // Fallback: if no tags, show landmark if available
+ 
       if (land && land !== '-') {
         const span = document.createElement('span');
         span.className = 'modal-tag';
@@ -143,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Show modal
+    
     modal.classList.add('active');
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
@@ -155,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  // Event delegation: handle clicks
+  
   document.addEventListener('click', (ev) => {
     // Check if clicking close button or backdrop
     if (ev.target.closest('.modal-close')) {
@@ -170,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Open modal when clicking card (only if not inside modal)
+ 
     const card = ev.target.closest('.capital-card, .city-card');
     if (card && !card.closest('.capital-modal')) {
       openModalFromCard(card);
@@ -178,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ESC key to close
+ 
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape') {
       closeModal();
