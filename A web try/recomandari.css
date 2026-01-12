@@ -3,6 +3,46 @@
 /* ======================================= */
 input[type="radio"] { display: none; }
 
+/* Page-specific background: applied only on Recomandări page
+   (recomandari.css is only loaded by recomandari.html) */
+body {
+    background-image: url('https://ak-d.tripcdn.com/images/100c1a0000019pmfa3E5B.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Optional overlay to improve text contrast */
+.rec-hero {
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+}
+
+/* Ensure hero headings and subtitle are visible on the image */
+.rec-hero h2,
+.rec-hero p {
+    color: #fff !important;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+/* Header styling to match Toate Capitalele page (white bar with subtle shadow) */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header .logo a,
+header nav a {
+    color: #333;
+}
+header nav a:hover {
+    color: #007bff;
+}
+header nav a.active {
+    background-color: #333;
+    color: #fff;
+}
+
 /* ======================================= */
 /* === Tab Pills Container === */
 /* ======================================= */

@@ -4,12 +4,78 @@
     box-sizing: border-box;
 }
 
+/* Background only for the Popular page (scoped to the .popular-destinations section)
+   Variant: image appears behind the main section with a dark overlay for contrast */
+body.popular-page {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f8f9fa;
 }
 
+/* Place background image into the main popular section so header/footer remain unchanged */
+.popular-destinations {
+    position: relative;
+    padding: 4rem 5%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.popular-destinations::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://s3-eu-north-1.amazonaws.com/py3.visitsweden.com/original_images/2018-07-05_041957-146932_IBSweb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+/* Ensure content sits above the background layer */
+.popular-destinations > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Improve readability for headings on the image */
+.popular-destinations .section-header h2,
+.popular-destinations .section-header .subtitle {
+    color: #fff;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+}
+
+/* Ensure card/content text remains dark (cards use white background) */
+.popular-destinations .city-card,
+.popular-destinations .city-content,
+.popular-destinations .card-info,
+.popular-destinations .city-description,
+.popular-destinations .city-info,
+.popular-destinations .tag,
+.popular-destinations .feature-tag {
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header .logo a,
+header nav a {
+    color: #333;
+}
+header nav a:hover {
+    color: #007bff;
+}
+header nav a.active {
+    background-color: #333;
+    color: #fff;
+}
 .popular-destinations {
     padding: 4rem 5%;
     background-color: #f8f9fa;
