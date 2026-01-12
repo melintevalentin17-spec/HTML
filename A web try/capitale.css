@@ -161,23 +161,21 @@ header nav a.active {
 }
 
 .dropdown-menu {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     z-index: 100;
-    
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    
-    width: 250px; 
-    margin-top: 0.5rem; 
-    padding: 0.5rem 0; 
+    width: 250px;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
 }
 
-.dropdown-menu.show {
+.dropdown-menu.open {
     display: block;
 }
 
@@ -209,6 +207,18 @@ header nav a.active {
 
 .dropdown-item.active .fa-check {
     opacity: 1; 
+}
+
+.card-description {
+    display: none;
+}
+
+.card-short {
+    display: none;
+}
+
+.city-tags {
+    display: none;
 }
 
 @media (max-width: 768px) {
