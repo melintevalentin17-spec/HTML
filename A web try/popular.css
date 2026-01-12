@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Background only for the Popular page (scoped to the .popular-destinations section)
-   Variant: image appears behind the main section with a dark overlay for contrast */
 body.popular-page {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -17,7 +15,6 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Place background image into the main popular section so header/footer remain unchanged */
 .popular-destinations {
     position: relative;
     padding: 4rem 5%;
@@ -37,20 +34,17 @@ body {
     z-index: 0;
 }
 
-/* Ensure content sits above the background layer */
 .popular-destinations > * {
     position: relative;
     z-index: 1;
 }
 
-/* Improve readability for headings on the image */
 .popular-destinations .section-header h2,
 .popular-destinations .section-header .subtitle {
     color: #fff;
     text-shadow: 0 3px 8px rgba(0,0,0,0.7);
 }
 
-/* Ensure card/content text remains dark (cards use white background) */
 .popular-destinations .city-card,
 .popular-destinations .city-content,
 .popular-destinations .card-info,
@@ -268,13 +262,24 @@ header nav a.active {
     color: #6c757d;
 }
 
-/* See All Section */
 .see-all-section {
     text-align: center;
     padding: 3rem;
     background: white;
     border-radius: 15px;
     margin-top: 2rem;
+}
+
+.see-all-section h3 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.see-all-section p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .see-all-button {
@@ -292,7 +297,6 @@ header nav a.active {
     background: #0056b3;
 }
 
-/* Responsive Design */
 @media (max-width: 968px) {
     .city-card {
         flex-direction: column;
