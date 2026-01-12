@@ -1,10 +1,5 @@
-/* ======================================= */
-/* === Radio inputs (hidden) === */
-/* ======================================= */
 input[type="radio"] { display: none; }
 
-/* Page-specific background: applied only on Recomandări page
-   (recomandari.css is only loaded by recomandari.html) */
 body {
     background-image: url('https://ak-d.tripcdn.com/images/100c1a0000019pmfa3E5B.jpg');
     background-size: cover;
@@ -13,20 +8,17 @@ body {
     background-attachment: fixed;
 }
 
-/* Optional overlay to improve text contrast */
 .rec-hero {
     background: rgba(0,0,0,0.55);
     color: #fff;
 }
 
-/* Ensure hero headings and subtitle are visible on the image */
 .rec-hero h2,
 .rec-hero p {
     color: #fff !important;
     text-shadow: 0 3px 8px rgba(0,0,0,0.6);
 }
 
-/* Header styling to match Toate Capitalele page (white bar with subtle shadow) */
 header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -42,10 +34,6 @@ header nav a.active {
     background-color: #333;
     color: #fff;
 }
-
-/* ======================================= */
-/* === Tab Pills Container === */
-/* ======================================= */
 .rec-tabs {
     max-width: 1100px;
     margin: 1rem auto 1.5rem;
@@ -71,7 +59,7 @@ header nav a.active {
     box-shadow: none;
     font-size: 1rem;
 }
-/* Checked state for tabs */
+
 #tab1:checked ~ .rec-tabs label[for="tab1"],
 #tab2:checked ~ .rec-tabs label[for="tab2"],
 #tab3:checked ~ .rec-tabs label[for="tab3"] {
@@ -81,9 +69,7 @@ header nav a.active {
     color: #0b0f1a;
 }
 
-/* ======================================= */
-/* === Description Box (updates per tab) === */
-/* ======================================= */
+
 .rec-desc {
     max-width: 1100px;
     margin: 0 auto 1.5rem;
@@ -97,14 +83,11 @@ header nav a.active {
 .rec-desc strong { color: #0b0f1a; display: block; margin-bottom: 0.5rem; }
 .rec-desc p { margin: 0; color: #5a5a5a; line-height: 1.6; }
 
-/* Update description content based on checked tab */
 #tab1:checked ~ .rec-desc::after { content: "Turism Solo"; }
 #tab2:checked ~ .rec-desc::after { content: "În Familie"; }
 #tab3:checked ~ .rec-desc::after { content: "Cu Prietenii"; }
 
-/* ======================================= */
-/* === Cards Grid === */
-/* ======================================= */
+
 .capitale-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -114,9 +97,7 @@ header nav a.active {
     margin: 0 auto 3rem;
 }
 
-/* ======================================= */
-/* === Capital Card (Square Box Layout) === */
-/* ======================================= */
+
 .capital-card {
     background-color: #fff;
     border-radius: 12px;
@@ -132,7 +113,7 @@ header nav a.active {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Image container - full width at top */
+
 .card-image-container {
     position: relative;
     width: 100%;
@@ -146,7 +127,7 @@ header nav a.active {
     object-fit: cover;
 }
 
-/* Country tag on image */
+
 .country-tag {
     position: absolute;
     top: 0.75rem;
@@ -160,7 +141,7 @@ header nav a.active {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Info section (title + details) */
+
 .card-info {
     padding: 1.25rem;
     flex-grow: 1;
@@ -181,19 +162,19 @@ header nav a.active {
     color: #5a5a5a;
 }
 
-/* Description box at bottom */
 .card-description {
-    background-color: #f5f6f8;
-    padding: 0.85rem 1.25rem;
-    border-top: 1px solid #e9ecef;
-    font-size: 0.9rem;
-    color: #444;
-    line-height: 1.4;
+    display: none;
 }
 
-/* ======================================= */
-/* === Hero Section === */
-/* ======================================= */
+.card-short {
+    display: none;
+}
+
+.city-tags {
+    display: none;
+}
+
+
 .rec-hero {
     padding: 2.5rem 2rem 1rem;
     text-align: center;
@@ -210,17 +191,12 @@ header nav a.active {
     font-size: 1rem;
 }
 
-/* ======================================= */
-/* === Tab Content Visibility === */
-/* ======================================= */
 .tab-content { display: none; }
 #tab1:checked ~ .tab-areas #area1,
 #tab2:checked ~ .tab-areas #area2,
 #tab3:checked ~ .tab-areas #area3 { display: block; }
 
-/* ======================================= */
-/* === Responsive Design === */
-/* ======================================= */
+
 @media (max-width: 768px) {
     .rec-tabs { grid-template-columns: 1fr; }
     .rec-desc { margin: 0.75rem; }
