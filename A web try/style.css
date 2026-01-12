@@ -131,7 +131,6 @@ footer {
     }
 }
 
-/* Modal for capital details (shared across pages) */
 .capital-modal {
     position: fixed;
     inset: 0;
@@ -201,14 +200,11 @@ footer {
     background: #f0f0f0;
     border-color: #999;
 }
-
-/* Ensure close button and panel are hidden when modal is not active to avoid overlap */
 .capital-modal .modal-close { display: none; }
 .capital-modal .modal-panel { visibility: hidden; transform: translateY(8px) scale(0.995); }
 .capital-modal.active .modal-close { display: flex; }
 .capital-modal.active .modal-panel { visibility: visible; transform: translateY(0) scale(1); }
 
-/* Hero image section */
 .capital-modal .modal-hero {
     width: 100%;
     height: 280px;
@@ -231,7 +227,6 @@ footer {
     z-index: 5;
 }
 
-/* Content section */
 .capital-modal .modal-content {
     padding: 28px 24px;
     overflow-y: auto;
@@ -246,7 +241,6 @@ footer {
     line-height: 1.2;
 }
 
-/* Info grid with 3 pills */
 .capital-modal .modal-info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -285,7 +279,6 @@ footer {
     color: #333;
 }
 
-/* Description */
 .capital-modal .modal-desc {
     font-size: 0.95rem;
     line-height: 1.6;
@@ -293,7 +286,6 @@ footer {
     margin-bottom: 24px;
 }
 
-/* Objectives section */
 .capital-modal .modal-objectives {
     margin-top: 20px;
     padding-top: 20px;
@@ -314,7 +306,6 @@ footer {
     font-size: 1.2rem;
 }
 
-/* Tags */
 .capital-modal .modal-tags {
     display: flex;
     gap: 8px;
@@ -336,6 +327,17 @@ footer {
     background: #e0e0e0;
 }
 
+.capital-modal.large .modal-desc {
+    font-size: 1.18rem;
+    line-height: 2.05;
+    margin-bottom: 34px;
+}
+
+.capital-modal.large .modal-tags {
+    gap: 12px;
+}
+
+
 @media (max-width: 600px) {
     .capital-modal {
         padding: 10px;
@@ -349,7 +351,7 @@ footer {
         height: 220px;
     }
 
-    /* On small screens move country tag to the left so it doesn't overlap the close button */
+   
     .capital-modal .modal-country-tag {
         right: auto;
         left: 16px;
