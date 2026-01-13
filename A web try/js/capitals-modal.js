@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tagsEl.appendChild(span);
       }
     }
-
     
     modal.classList.add('active');
     document.documentElement.style.overflow = 'hidden';
@@ -152,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  
   document.addEventListener('click', (ev) => {
     // Check if clicking close button or backdrop
     if (ev.target.closest('.modal-close')) {
@@ -166,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ev.stopPropagation();
       return;
     }
-
  
     const card = ev.target.closest('.capital-card, .city-card');
     if (card && !card.closest('.capital-modal')) {
